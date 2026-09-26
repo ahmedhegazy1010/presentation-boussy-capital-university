@@ -61,7 +61,7 @@ export const Slide3Definitions: React.FC = () => {
         {/* Thematic Photo Banner */}
         <div className="h-32 sm:h-36 w-full rounded-2xl overflow-hidden relative shadow-xs mb-3.5 border border-slate-200">
           <img
-            src="/images/slide3_definitions.jpg"
+            src="./images/slide3_definitions.jpg"
             alt="المراجع الأكاديمية وتعريفات رواد الإدارة"
             className="w-full h-full object-cover"
           />

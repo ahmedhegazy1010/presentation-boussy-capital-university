@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="cursor-pointer flex items-center gap-2.5"
         >
           <img
-            src="/images/capital_university_logo.png"
+            src="./images/capital_university_logo.png"
             alt="جامعة العاصمة"
             className="h-9 w-auto object-contain"
           />

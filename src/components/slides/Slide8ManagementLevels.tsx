@@ -16,7 +16,7 @@ export const Slide8ManagementLevels: React.FC = () => {
         {/* Thematic Photo Banner */}
         <div className="h-32 sm:h-38 w-full rounded-2xl overflow-hidden relative shadow-xs mb-3.5 border border-slate-200">
           <img
-            src="/images/slide8_levels.jpg"
+            src="./images/slide8_levels.jpg"
             alt="الهيكل الهرمي والتدرج الإداري"
             className="w-full h-full object-cover"
           />

@@ -144,7 +144,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   slide1.background = { color: BG_COLOR };
 
   // Top header with logo
-  const logoB64 = await urlToBase64('/images/capital_university_logo.png');
+  const logoB64 = await urlToBase64('./images/capital_university_logo.png');
   if (logoB64) {
     slide1.addImage({
       data: logoB64,
@@ -206,7 +206,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   });
 
   // Peabody Library Image
-  const coverImgB64 = await urlToBase64('/images/slide1_cover.jpg');
+  const coverImgB64 = await urlToBase64('./images/slide1_cover.jpg');
   if (coverImgB64) {
     slide1.addImage({
       data: coverImgB64,
@@ -260,7 +260,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 2 (المقدمة)...');
   const slide2 = pptx.addSlide();
   addHeader(slide2, 2, 'المقدمة التاريخية والأكاديمية لنشأة الإدارة', 'تأصيل الفكر الإداري: من الفطرة والتعاون الإنساني إلى مواكبة التطور المجتمعي والتقني');
-  await addBanner(slide2, '/images/slide2_intro.jpg', 'العمل الجماعي والتعاون البشري: النواة الفطرية الأولى لنشأة الإدارة', 1.35, 1.2);
+  await addBanner(slide2, './images/slide2_intro.jpg', 'العمل الجماعي والتعاون البشري: النواة الفطرية الأولى لنشأة الإدارة', 1.35, 1.2);
 
   const pillarsSlide2 = [
     { title: 'المرتكز الأول: الإدارة قديمة بقدم الإنسان', text: 'بدأت الإدارة كممارسة فطرية مع سعي الإنسان لتأمين قوته وحماية مسكنه وتخزين المؤونة وتوزيع المسؤوليات داخل الأسرة.' },
@@ -317,7 +317,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 3 (مصفوفة التعاريف)...');
   const slide3 = pptx.addSlide();
   addHeader(slide3, 3, 'مصفوفة تعاريف الإدارة', 'استعراض لأبرز التعاريف الأكاديمية التاريخية والمعاصرة في علم الإدارة وإدارة موارد الأسرة');
-  await addBanner(slide3, '/images/slide3_definitions.jpg', 'التأصيل المعرفي والمراجع الأكاديمية الكبرى في علم الإدارة', 1.35, 1.05);
+  await addBanner(slide3, './images/slide3_definitions.jpg', 'التأصيل المعرفي والمراجع الأكاديمية الكبرى في علم الإدارة', 1.35, 1.05);
 
   const defsSlide3 = [
     { scholar: 'فريدريك تايلور (1911)', quote: 'الإدارة هي أن تعرف بالضبط ماذا تريد ثم تتأكد أن الأفراد يؤدونه بأحسن وأرخص طريقة ممكنة.' },
@@ -399,7 +399,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 4 (التعريف الحديث)...');
   const slide4 = pptx.addSlide();
   addHeader(slide4, 4, 'التعريف الحديث للإدارة وإدارة موارد الأسرة', 'تكامل الاستخدام الأمثل للموارد والاستدامة وجودة الحياة');
-  await addBanner(slide4, '/images/slide4_modern.jpg', 'الاستدامة الشاملة وجودة الحياة في بيئة الأسرة والمؤسسة المعاصرة', 1.35, 1.2);
+  await addBanner(slide4, './images/slide4_modern.jpg', 'الاستدامة الشاملة وجودة الحياة في بيئة الأسرة والمؤسسة المعاصرة', 1.35, 1.2);
 
   // Master definition
   slide4.addShape(pptx.ShapeType.roundRect, {
@@ -475,7 +475,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 5 (الخصائص الجوهرية)...');
   const slide5 = pptx.addSlide();
   addHeader(slide5, 5, 'الخصائص الجوهرية للعملية الإدارية');
-  await addBanner(slide5, '/images/slide5_characteristics.jpg', 'الديناميكية المستمرة وإدارة الندرة واستثمار الوقت والطاقات', 1.25, 1.2);
+  await addBanner(slide5, './images/slide5_characteristics.jpg', 'الديناميكية المستمرة وإدارة الندرة واستثمار الوقت والطاقات', 1.25, 1.2);
 
   characteristicsData.forEach((item, idx) => {
     const col = idx % 3;
@@ -538,7 +538,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 6 (أهمية الإدارة)...');
   const slide6 = pptx.addSlide();
   addHeader(slide6, 6, 'أهمية الإدارة وجدوى الموارد', 'المحاور الستة الأساسية لأهمية الإدارة في تنظيم الموارد وتحقيق الأهداف');
-  await addBanner(slide6, '/images/slide6_importance.jpg', 'تعظيم العائد من الموارد المتاحة وصناعة القرارات الرشيدة', 1.35, 1.15);
+  await addBanner(slide6, './images/slide6_importance.jpg', 'تعظيم العائد من الموارد المتاحة وصناعة القرارات الرشيدة', 1.35, 1.15);
 
   importanceData.forEach((item, idx) => {
     const col = idx % 3;
@@ -601,7 +601,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 7 (عناصر العملية الإدارية)...');
   const slide7 = pptx.addSlide();
   addHeader(slide7, 7, 'عناصر العملية الإدارية (النموذج المتكامل)', 'الوظائف الإدارية الخمس ودورها في إدارة المؤسسات والأسرة');
-  await addBanner(slide7, '/images/slide7_elements.jpg', 'تكامل دورة العمل الإداري: من التخطيط والتنظيم إلى التنسيق والرقابة', 1.35, 1.15);
+  await addBanner(slide7, './images/slide7_elements.jpg', 'تكامل دورة العمل الإداري: من التخطيط والتنظيم إلى التنسيق والرقابة', 1.35, 1.15);
 
   elementsData.forEach((item, idx) => {
     const col = idx % 3;
@@ -651,7 +651,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 8 (مستويات الإدارة)...');
   const slide8 = pptx.addSlide();
   addHeader(slide8, 8, 'الهيكل الهرمي لمستويات الإدارة');
-  await addBanner(slide8, '/images/slide8_levels.jpg', 'التكامل الهيكلي بين التوجيه الاستراتيجي والبرمجة التكتيكية والتنفيذ التشغيلي', 1.25, 1.3);
+  await addBanner(slide8, './images/slide8_levels.jpg', 'التكامل الهيكلي بين التوجيه الاستراتيجي والبرمجة التكتيكية والتنفيذ التشغيلي', 1.25, 1.3);
 
   managementLevelsData.forEach((lvl, idx) => {
     const x = 0.6 + (2 - idx) * 3.0;
@@ -725,7 +725,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 9 (الأنماط الإدارية)...');
   const slide9 = pptx.addSlide();
   addHeader(slide9, 9, 'الأنماط الإدارية الأربعة');
-  await addBanner(slide9, '/images/slide9_styles.jpg', 'المرونة القيادية والمواءمة بين حسم القرار ومشاركة الفريق', 1.25, 1.2);
+  await addBanner(slide9, './images/slide9_styles.jpg', 'المرونة القيادية والمواءمة بين حسم القرار ومشاركة الفريق', 1.25, 1.2);
 
   managementStylesData.forEach((style, idx) => {
     const col = idx % 2;
@@ -789,7 +789,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 10 (خط التطور التاريخي)...');
   const slide10 = pptx.addSlide();
   addHeader(slide10, 10, 'خط التطور التاريخي للفكر الإداري');
-  await addBanner(slide10, '/images/slide10_timeline.jpg', 'من عبقرية التنظيم في الحضارات الإنسانية العريقة إلى عصر الإدارة الذكية المعاصرة', 1.25, 1.25);
+  await addBanner(slide10, './images/slide10_timeline.jpg', 'من عبقرية التنظيم في الحضارات الإنسانية العريقة إلى عصر الإدارة الذكية المعاصرة', 1.25, 1.25);
 
   timelineMilestones.forEach((m, idx) => {
     const col = idx % 2;
@@ -852,7 +852,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 11 (مدارس الفكر الإداري)...');
   const slide11 = pptx.addSlide();
   addHeader(slide11, 11, 'مدارس الفكر الإداري الكبرى');
-  await addBanner(slide11, '/images/slide11_schools.jpg', 'الركائز الفكرية والأعمدة النظرية التي صاغت المدارس الإدارية الكبرى', 1.25, 1.2);
+  await addBanner(slide11, './images/slide11_schools.jpg', 'الركائز الفكرية والأعمدة النظرية التي صاغت المدارس الإدارية الكبرى', 1.25, 1.2);
 
   schoolsOfManagementData.forEach((s, idx) => {
     const col = idx % 3;
@@ -915,7 +915,7 @@ export async function generateAndDownloadPptx(onProgress?: (msg: string) => void
   if (onProgress) onProgress('تجهيز الشريحة 12 (الخاتمة)...');
   const slide12 = pptx.addSlide();
   addHeader(slide12, 12, 'الخاتمة والمعادلة الجوهرية للإدارة المعاصرة');
-  await addBanner(slide12, '/images/slide12_conclusion.jpg', 'أفق التوازن المستدام وجودة الحياة في منظومة إدارة الموارد الأسرية والمؤسسية', 1.25, 1.2);
+  await addBanner(slide12, './images/slide12_conclusion.jpg', 'أفق التوازن المستدام وجودة الحياة في منظومة إدارة الموارد الأسرية والمؤسسية', 1.25, 1.2);
 
   // Master Formula Box
   slide12.addShape(pptx.ShapeType.roundRect, {

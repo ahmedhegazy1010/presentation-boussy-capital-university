@@ -16,7 +16,7 @@ export const Slide10EvolutionTimeline: React.FC = () => {
         {/* Thematic Photo Banner */}
         <div className="h-36 sm:h-44 w-full rounded-2xl overflow-hidden relative shadow-xs mb-3.5 border border-slate-200">
           <img
-            src="/images/slide10_timeline.jpg"
+            src="./images/slide10_timeline.jpg"
             alt="الأهرامات المصرية شاهداً على عبقرية الإدارة والتنظيم في الحضارات القديمة"
             className="w-full h-full object-cover"
           />

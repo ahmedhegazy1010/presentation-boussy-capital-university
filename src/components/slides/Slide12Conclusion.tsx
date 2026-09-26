@@ -41,7 +41,7 @@ export const Slide12Conclusion: React.FC<Slide12ConclusionProps> = ({
         {/* Thematic Photo Banner */}
         <div className="h-36 sm:h-44 w-full rounded-2xl overflow-hidden relative shadow-xs mb-4 border border-slate-200">
           <img
-            src="/images/slide12_conclusion.jpg"
+            src="./images/slide12_conclusion.jpg"
             alt="أفق التوازن المتناغم بين الإنسان والموارد والهدف"
             className="w-full h-full object-cover"
           />

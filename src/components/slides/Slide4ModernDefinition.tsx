@@ -16,7 +16,7 @@ export const Slide4ModernDefinition: React.FC = () => {
         {/* Thematic Photo Banner */}
         <div className="h-36 sm:h-44 w-full rounded-2xl overflow-hidden relative shadow-xs mb-4 border border-slate-200">
           <img
-            src="/images/slide4_modern.jpg"
+            src="./images/slide4_modern.jpg"
             alt="الاستدامة وجودة الحياة الأسرية المعاصرة"
             className="w-full h-full object-cover"
           />

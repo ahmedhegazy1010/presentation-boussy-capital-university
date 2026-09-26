@@ -16,7 +16,7 @@ export const Slide9ManagementStyles: React.FC = () => {
         {/* Thematic Photo Banner */}
         <div className="h-32 sm:h-36 w-full rounded-2xl overflow-hidden relative shadow-xs mb-3.5 border border-slate-200">
           <img
-            src="/images/slide9_styles.jpg"
+            src="./images/slide9_styles.jpg"
             alt="التفاعل والقيادة التشاركية"
             className="w-full h-full object-cover"
           />

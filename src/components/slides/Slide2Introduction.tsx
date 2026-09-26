@@ -43,7 +43,7 @@ export const Slide2Introduction: React.FC = () => {
         {/* Thematic Photo Banner */}
         <div className="h-32 sm:h-40 w-full rounded-2xl overflow-hidden relative shadow-xs mb-3.5 border border-slate-200">
           <img
-            src="/images/slide2_intro.jpg"
+            src="./images/slide2_intro.jpg"
             alt="العمل الجماعي والتعاون الإنساني"
             className="w-full h-full object-cover"
           />

@@ -16,7 +16,7 @@ export const Slide1Hero: React.FC = () => {
           <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
             <div className="flex items-center gap-4">
               <img
-                src="/images/capital_university_logo.png"
+                src="./images/capital_university_logo.png"
                 alt="لوجو جامعة العاصمة"
                 className="h-16 sm:h-20 w-auto object-contain drop-shadow-sm"
               />
@@ -53,7 +53,7 @@ export const Slide1Hero: React.FC = () => {
           {/* Academic Visual Showcase */}
           <div className="h-44 sm:h-56 w-full rounded-2xl overflow-hidden relative shadow-sm mb-6 border border-slate-200">
             <img
-              src="/images/slide1_cover.jpg"
+              src="./images/slide1_cover.jpg"
               alt="صرح أكاديمي ومعرفي"
               className="w-full h-full object-cover"
             />
