@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #062A5A;
+    --primary-light: #0B3D91;
+    --accent: #D4AF37;
+    --accent-hover: #B89326;
+    --bg-main: #F8FAFC;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Cairo', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(11, 61, 145, 0.07), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card-interactive {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(11, 61, 145, 0.12), 0 8px 16px -4px rgba(242, 101, 36, 0.08);
+  border-color: rgba(242, 101, 36, 0.3);
+}
+
+.glass-navy {
+  background: linear-gradient(135deg, rgba(6, 42, 90, 0.95), rgba(4, 28, 61, 0.98));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(6, 42, 90, 0.3);
+}
+
+/* Subtle Animated Background Gradients */
+.bg-mesh-radial {
+  background: radial-gradient(circle at 10% 20%, rgba(6, 42, 90, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 80%);
+}
+
+/* 1920x1080 Full HD Slide Styling */
+.slide-section {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4.5rem 2rem 3rem 2rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .slide-section {
+    padding: 4rem 4rem 3rem 4rem;
+  }
+}
+
+/* Fixed 1920x1080 Slide Stage for Presentation Mode */
+.slide-stage-1080 {
+  width: 1920px;
+  height: 1080px;
+  min-width: 1920px;
+  min-height: 1080px;
+  max-width: 1920px;
+  max-height: 1080px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slide-stage-1080 .slide-section {
+  width: 1920px !important;
+  height: 1080px !important;
+  min-height: 1080px !important;
+  max-height: 1080px !important;
+  padding: 3.5rem 5rem !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Print Optimization - Exact 1920x1080 PowerPoint / PDF Export */
+@media print {
+  @page {
+    size: 1920px 1080px;
+    margin: 0;
+  }
+
+  body {
+    background: #ffffff !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .slide-section {
+    width: 1920px !important;
+    height: 1080px !important;
+    min-height: 1080px !important;
+    max-height: 1080px !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+    overflow: hidden !important;
+    padding: 3.5rem 5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #062A5A;
+}
