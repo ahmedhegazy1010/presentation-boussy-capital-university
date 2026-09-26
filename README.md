@@ -4,8 +4,12 @@
 
 ---
 
-### 🌐 رابط الموقع المباشر على Netlify (Live Demo):
-👉 **[https://presentation-boussy-capital-univ.netlify.app](https://presentation-boussy-capital-univ.netlify.app)**
+### 🌐 روابط المعاينة المباشرة (Live Demos):
+- 🟢 **رابط مباشر يعمل داخل مصر بدون أي حجب (GitHub Pages):**  
+  👉 **[https://ahmedhegazy1010.github.io/presentation-boussy-capital-university/](https://ahmedhegazy1010.github.io/presentation-boussy-capital-university/)**
+
+- 🔵 **رابط Netlify (يتطلب VPN داخل مصر بسبب حظر شبكات WE لنطاقات netlify.app):**  
+  👉 **[https://presentation-boussy-capital-univ.netlify.app](https://presentation-boussy-capital-univ.netlify.app)**
 
 ---
 
