@@ -4,6 +4,11 @@
 
 ---
 
+### 🌐 رابط الموقع المباشر على Netlify (Live Demo):
+👉 **[https://presentation-boussy-capital-univ.netlify.app](https://presentation-boussy-capital-univ.netlify.app)**
+
+---
+
 ### 🎓 بيانات البحث الأكاديمي
 - **مقدم من الباحثة:** بوسي أحمد هنداوي
 - **تحت إشراف:**
