@@ -5,8 +5,8 @@ import { managementStylesData } from '../../data/academicContent';
 
 export const Slide9ManagementStyles: React.FC = () => {
   return (
-    <section id="slide-9" className="slide-section relative overflow-hidden bg-slate-50 py-10 px-4 sm:px-8">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="slide-9" className="slide-section relative overflow-hidden bg-slate-50 py-3 sm:py-5 px-3 sm:px-6">
+      <div className="max-w-[1550px] mx-auto w-full">
         <SlideHeader
           slideNumber={9}
           totalSlides={12}

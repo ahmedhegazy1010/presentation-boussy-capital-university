@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           : 'py-3 bg-white/70 backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+      <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-8 flex items-center justify-between gap-4">
         {/* Logo / Brand */}
         <div
           onClick={() => onJumpToSlide(1)}

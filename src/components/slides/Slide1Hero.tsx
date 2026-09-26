@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 export const Slide1Hero: React.FC = () => {
   return (
-    <section id="slide-1" className="slide-section relative overflow-hidden bg-slate-50 flex flex-col justify-center min-h-screen py-10 px-4 sm:px-8">
-      <div className="max-w-5xl mx-auto w-full">
+    <section id="slide-1" className="slide-section relative overflow-hidden bg-slate-50 flex flex-col justify-center min-h-screen py-3 sm:py-5 px-3 sm:px-6">
+      <div className="max-w-[1500px] mx-auto w-full">
         {/* Main Clean Academic Slide Card */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}

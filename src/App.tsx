@@ -54,9 +54,8 @@ const slideVariants = {
 export function App() {
   const [currentSlide, setCurrentSlide] = useState<number>(1);
   const [direction, setDirection] = useState<number>(1);
-  const [viewMode, setViewMode] = useState<'landing' | 'slides'>('landing');
+  const [viewMode, setViewMode] = useState<'landing' | 'slides'>('slides');
   const [isExportModalOpen, setIsExportModalOpen] = useState<boolean>(false);
-  const [stageScale, setStageScale] = useState<number>(1);
 
   // Auto-play Slideshow State
   const [isAutoPlay, setIsAutoPlay] = useState<boolean>(false);
@@ -64,23 +63,6 @@ export function App() {
 
   const totalSlides = 12;
   const slideDurationMs = 7000; // 7 seconds per slide for academic readability
-
-  // Calculate dynamic scale for exact 1920x1080 stage
-  useEffect(() => {
-    if (viewMode !== 'slides') return;
-
-    const handleResize = () => {
-      const availableW = window.innerWidth - 32;
-      const availableH = window.innerHeight - 120;
-      const scaleX = availableW / 1920;
-      const scaleY = availableH / 1080;
-      setStageScale(Math.min(scaleX, scaleY));
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [viewMode]);
 
   // Track scroll position in landing mode to update currentSlide
   useEffect(() => {
@@ -274,36 +256,27 @@ export function App() {
             />
           </div>
         ) : (
-          /* Slide Deck 1920x1080 Full HD Presentation Stage with 3D Transitions */
-          <div className="min-h-screen w-full flex items-center justify-center pt-14 pb-16 px-2 overflow-hidden bg-slate-900/5">
-            <div
-              style={{
-                width: '1920px',
-                height: '1080px',
-                transform: `scale(${stageScale})`,
-                transformOrigin: 'center center',
-                perspective: '1400px',
-              }}
-              className="slide-stage-1080 bg-slate-50 shadow-2xl rounded-2xl overflow-hidden flex flex-col justify-center flex-shrink-0 border border-slate-200/90 relative"
-            >
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                  key={currentSlide}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  className="w-full h-full absolute inset-0 flex flex-col justify-center origin-center"
-                  style={{
-                    transformStyle: 'preserve-3d',
-                    backfaceVisibility: 'hidden',
-                  }}
-                >
+          /* Full Screen Responsive Edge-to-Edge Presentation Stage with 3D Transitions */
+          <div className="h-screen w-full overflow-hidden bg-slate-50 pt-16 pb-16 relative flex flex-col justify-center">
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.div
+                key={currentSlide}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="w-full h-full absolute inset-0 pt-16 pb-16 px-4 sm:px-8 lg:px-12 flex flex-col justify-center items-center origin-center overflow-y-auto"
+                style={{
+                  transformStyle: 'preserve-3d',
+                  backfaceVisibility: 'hidden',
+                }}
+              >
+                <div className="w-full max-w-[1600px] my-auto flex flex-col justify-center">
                   {renderSlideContent(currentSlide)}
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         )}
       </main>
